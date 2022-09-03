@@ -48,4 +48,7 @@ $(document).ready(function () {
       $('.sandwich').removeClass('is-active');
     }
   });
+  $('.js-link-hover').on("mouseenter", function () {
+    $(this).parent().prev().find('.zagimg').attr('src', $(this).attr('data-back-src'));
+  });
 });
