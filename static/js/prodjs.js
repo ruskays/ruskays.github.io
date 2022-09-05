@@ -79,5 +79,6 @@ $(document).ready(function () {
   document.body.addEventListener('touchcancel', function () {
     active = false;
     document.querySelector('.scroller').classList.remove('scrolling');
-  });
+  }); 
+
 });
