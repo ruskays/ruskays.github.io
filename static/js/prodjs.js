@@ -79,6 +79,26 @@ $(document).ready(function () {
   document.body.addEventListener('touchcancel', function () {
     active = false;
     document.querySelector('.scroller').classList.remove('scrolling');
-  }); 
+  }); //sliderprod2
 
+  $('.js-slider-img').slick({
+    dots: true,
+    arrows: false,
+    appendDots: $('.slick-slider-dotsimg')
+  });
+  $('.js-slider-img2').slick({
+    dots: true,
+    arrows: false,
+    appendDots: $('.slick-slider-dotsimg2')
+  });
+  $('.js-slider-img3').slick({
+    dots: true,
+    arrows: false,
+    appendDots: $('.slick-slider-dotsimg3')
+  });
+  $('.js-slider-img4').slick({
+    dots: true,
+    arrows: false,
+    appendDots: $('.slick-slider-dotsimg4')
+  });
 });
