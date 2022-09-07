@@ -180,4 +180,9 @@ $(document).ready(function () {
     arrows: false,
     appendDots: $('.slick-slider-dots3')
   });
+  $('.js-slider-prod4').slick({
+    dots: true,
+    arrows: false,
+    appendDots: $('.slick-slider-dots4')
+  });
 });
