@@ -255,27 +255,27 @@
                             <div class="row mb-5">
                                 <div class="form-group col-sm-6">
                                     <label>Name:</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="nameFF">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label>Surename:</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="surenameFF">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label>Street and number:</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="streetFF">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label>City:</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="cityFF">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label>Phone number:</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="telFF">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label>E-mail address:</label>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" name="emailFF">
                                 </div>
                             </div>
 
@@ -293,8 +293,8 @@
                                 </div>
                             </div>
 
-                            <h4 class="border-bottom pb-4"><i class="ti ti-wallet mr-3 text-primary"></i>Payment</h4>
-                            <div class="row text-lg">
+                            <!-- <h4 class="border-bottom pb-4"><i class="ti ti-wallet mr-3 text-primary"></i>Payment</h4> -->
+                            <!-- <div class="row text-lg">
                                 <div class="col-md-4 col-sm-6 form-group">
                                     <label class="custom-control custom-radio">
                                         <input type="radio" name="payment_type" class="custom-control-input">
@@ -316,7 +316,7 @@
                                         <span class="custom-control-description">Cash</span>
                                     </label>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="text-center">
                             <button class="btn btn-primary btn-lg"><span>Order now!</span></button>
@@ -356,7 +356,7 @@
                     <div class="col-lg-5 col-md-6">
                         <h5 class="text-muted">Subscribe Us!</h5>
                         <!-- MailChimp Form -->
-                        <form action="http://suelo.us12.list-manage.com/subscribe/post-json?u=ed47dbfe167d906f2bc46a01b&amp;id=24ac8a22ad" id="sign-up-form" class="sign-up-form validate-form mb-5" method="POST">
+                        <form action="contacts.php" id="sign-up-form" class="sign-up-form validate-form mb-5" method="POST">
                             <div class="input-group">
                                 <input name="EMAIL" id="mce-EMAIL" type="email" class="form-control" placeholder="Tap your e-mail..." required>
                                 <span class="input-group-btn">
@@ -437,7 +437,9 @@
                     <hr class="hr-sm">
                     <div class="row text-lg">
                         <div class="col-7 text-right text-muted">Total:</div>
-                        <div class="col-5"><strong>$<span class="cart-total">0.00</span></strong></div>
+                        <div class="col-5"><strong>$<span class="cart-total">0.00
+                            <input type="text" class="ttotal" name="total" value="">
+                        </span></strong></div>
                     </div>
                 </div>
                 <div class="cart-empty">

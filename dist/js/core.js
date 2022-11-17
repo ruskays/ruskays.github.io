@@ -3617,6 +3617,7 @@
                $productsTotal: e(".cart-details .cart-products-total"),
                $delivery: e(".cart-details .cart-delivery"),
                $orderTotal: e(".cart-details .cart-total"),
+               $orderTotalValue: e(".cart-details .ttotal.value"),
                $empty: e(".cart-details .cart-empty"),
                $summary: e(".cart-details .cart-summary")
             },
@@ -3639,7 +3640,7 @@
                   s.find('[data-action="remove-from-cart"]').on("click", (function () {
                      c.removeItem(o), s.remove()
                   })), s.appendTo(t.DOM.$table)
-               })), t.DOM.$productsTotal.text(n.toFixed(2)), t.DOM.$delivery.text(c.deliveryPrice.toFixed(2)), t.DOM.$orderTotal.text((c.deliveryPrice + n).toFixed(2)), 0 === o ? (t.DOM.$headerNotification.hide(), t.DOM.$empty.show(), t.DOM.$summary.hide(), t.DOM.$table.hide()) : (t.DOM.$headerNotification.show(), t.DOM.$headerNotification.text(o), t.DOM.$empty.hide(), t.DOM.$summary.show(), t.DOM.$table.show()), t.DOM.$headerValue.text(n.toFixed(2))
+               })), t.DOM.$productsTotal.text(n.toFixed(2)), t.DOM.$delivery.text(c.deliveryPrice.toFixed(2)), t.DOM.$orderTotal.text((c.deliveryPrice + n).toFixed(2)), t.DOM.$orderTotalValue.text((c.deliveryPrice + n).toFixed(2)), 0 === o ? (t.DOM.$headerNotification.hide(), t.DOM.$empty.show(), t.DOM.$summary.hide(), t.DOM.$table.hide()) : (t.DOM.$headerNotification.show(), t.DOM.$headerNotification.text(o), t.DOM.$empty.hide(), t.DOM.$summary.show(), t.DOM.$table.show()), t.DOM.$headerValue.text(n.toFixed(2))
             },
             showPanel: function () {
                this.DOM.$panel.addClass("show"), i.b.fadeIn(400)
