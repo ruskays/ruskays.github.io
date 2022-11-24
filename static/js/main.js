@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
   sandwichToggle(); //
 });
 
+if( window.innerWidth >= 600 ){
+      //выполнять
 
 //обьявление переменных
 let canvas;
@@ -186,3 +188,4 @@ class FlowFieldEffect {
         flowFieldAnimation = requestAnimationFrame(this.animate.bind(this))
     }
 }
+ }
