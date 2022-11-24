@@ -50,6 +50,20 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   sandwichToggle(); //
+
+  //активные пункты
+  
+  function activeLink(elem, cls) {
+    $(elem).on('click', function() {
+        $(elem).removeClass(cls);
+        $(this).addClass(cls);
+     })
+  }
+  activeLink('.sidebar-item','sidebar-item__active');
+  activeLink('.cat-dropdown-link','cat-dropdown-link__active')
+ 
+
+
 });
 
 // if( window.innerWidth >= 600 ){

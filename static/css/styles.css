@@ -881,3 +881,10 @@ footer {
     top: -90px;
   }
 }
+.sidebar-item__active .sidebar-link{
+  color: #ff5c33;
+}
+    
+.cat-dropdown-item .cat-dropdown-link__active {
+      color: #e7461d;
+}
