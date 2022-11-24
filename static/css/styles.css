@@ -875,7 +875,7 @@ footer {
     display: none;
   }
 }
-@media (max-width: 374px) {
+@media (max-width: 380px) {
   .card-imgBx {
     top: -90px;
   }
