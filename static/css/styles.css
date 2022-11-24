@@ -626,8 +626,9 @@ nav ul {
   opacity: .6;
   top: 0;
   display: none;
-  background-color: #182ab1;
+  background-color: #e7461d;
   padding: 10px;
+  z-index: 100;
   -webkit-transition: linear .2s;
   -o-transition: linear .2s;
   transition: linear .2s; }
