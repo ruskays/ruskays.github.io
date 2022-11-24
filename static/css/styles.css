@@ -871,11 +871,11 @@ footer {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto; }
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .header {
     display: none;
   }
-}
+}*/
 @media (max-width: 380px) {
   .card-imgBx {
     top: -90px;

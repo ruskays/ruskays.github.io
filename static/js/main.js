@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   sandwichToggle(); //
 });
 
-if( window.innerWidth >= 600 ){
+// if( window.innerWidth >= 600 ){
       //выполнять
 
 //обьявление переменных
@@ -188,4 +188,4 @@ class FlowFieldEffect {
         flowFieldAnimation = requestAnimationFrame(this.animate.bind(this))
     }
 }
- }
+ // }
