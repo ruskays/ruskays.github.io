@@ -1,26 +1,5 @@
 "use strict";
-let sandwichElements = document.querySelectorAll('.sandwich');
-    sandwichElements.forEach(function (item) {
-      item.addEventListener('click', showSandwichTarget);
-    });
 
-    function showSandwichTarget() {
-      let navTarget = document.querySelector('.sidebar');
-      this.classList.toggle('is-active');
-      navTarget.classList.toggle('is-active');
-    }
-
-    document.addEventListener('click', function (e) {
-      let navTarget = document.querySelector('.sidebar');
-      let sandwich = document.querySelector('.sandwich');
-      let divContains = e.composedPath().includes(navTarget);
-
-      if (!divContains) {
-        navTarget.classList.remove('is-active'); // navActive.classList.remove('is-active');
-
-        sandwich.classList.remove('is-active');
-      }
-    });
 document.addEventListener('DOMContentLoaded', function () {
   var catToggle = function catToggle() {
     var catItem = document.getElementsByClassName('cat-item');
@@ -45,7 +24,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   catToggle(); //sandwich
 
-  
+  let sandwichToggle = function sandwichToggle() {
+    let sandwichElements = document.querySelectorAll('.sandwich');
+    sandwichElements.forEach(function (item) {
+      item.addEventListener('click', showSandwichTarget);
+    });
+
+    function showSandwichTarget() {
+      let navTarget = document.querySelector('.sidebar');
+      this.classList.toggle('is-active');
+      navTarget.classList.toggle('is-active');
+    }
+
+    document.addEventListener('click', function (e) {
+      let navTarget = document.querySelector('.sidebar');
+      let sandwich = document.querySelector('.sandwich');
+      let divContains = e.composedPath().includes(navTarget);
+
+      if (!divContains) {
+        navTarget.classList.remove('is-active'); // navActive.classList.remove('is-active');
+
+        sandwich.classList.remove('is-active');
+      }
+    });
+  };
+
+  sandwichToggle(); //
 });
 
 if( window.innerWidth >= 600 ){
