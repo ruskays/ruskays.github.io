@@ -25,9 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function showSandwichTarget() {
-      var navTarget = document.querySelector('.nav-wrap');
+      var navTarget = document.querySelector('.header-right__wrap');
+      var headerTarget = document.querySelector('.slide-cont');
+      var wrapper = document.querySelector('.wrapper');
       this.classList.toggle('is-active');
       navTarget.classList.toggle('is-active');
+      wrapper.classList.toggle('is-active');
+      headerTarget.classList.toggle('is-active');
     }
   };
 
