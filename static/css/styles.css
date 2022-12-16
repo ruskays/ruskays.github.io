@@ -677,8 +677,16 @@ header {
     -o-transition: linear .2s;
     transition: linear .2s; }
     .drop-list__link:hover {
-      background: #C56C1A;
-      color: #fff; }
+      color: #C56C1A;
+      text-decoration: underline; }
+
+.drop-list__link.is-active {
+  height: 40px;
+  background: #C56C1A;
+  color: #fff;
+  padding-left: 20px;
+  margin-left: -17px;
+  padding-right: 35px; }
 
 .btn {
   display: -webkit-inline-box;
