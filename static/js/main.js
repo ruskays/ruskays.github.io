@@ -1,5 +1,5 @@
 "use strict";
-
+navigator.serviceWorker.register('/service-worker.js')
 document.addEventListener('DOMContentLoaded', function () {
 
   //активный класс lang
