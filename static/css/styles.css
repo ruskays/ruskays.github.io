@@ -1194,6 +1194,9 @@ footer {
   .captcha {
     margin-bottom: 0;
   }
+  .form-confic {
+      max-width: 100%;
+   } 
   .s-banner {
     background-image: url(../images/content/bg-banner-mob.jpg);
     padding: 152px 0; }
