@@ -1036,6 +1036,7 @@ footer {
   .nav {
     width: 100%;
     margin-left: 0; }
+
   .nav-wrap {
     position: fixed;
     background: #EDEDED;
@@ -1121,6 +1122,12 @@ footer {
     .form-step__wrap .form-group {
       width: 100%;
       max-width: 292px; }
+   .captcha {
+    margin-bottom: 30px;
+   } 
+   .form-confic {
+      max-width: 50%;
+   } 
   .s-biz {
     padding: 40px 0;
     background-image: url(../images/content/bg-biz-ipad.jpg); }
@@ -1184,6 +1191,9 @@ footer {
   .sandwich__line--bottom {
     width: 7.5px;
     top: 12.5px; }
+  .captcha {
+    margin-bottom: 0;
+  }
   .s-banner {
     background-image: url(../images/content/bg-banner-mob.jpg);
     padding: 152px 0; }

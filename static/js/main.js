@@ -34,10 +34,10 @@ function nextPrev(n) {
   if (n == 1 && !validateForm()) return false;
   x[currentTab].style.display = "none";
   currentTab = currentTab + n;
-
   if (currentTab >= x.length) {
+    form.parentNode.lastElementChild.style.display = 'block'; 
     form.style.display = 'none';
-    form.nextSibling.style.display = 'block'; // document.getElementById("regForm").submit();
+    // document.getElementById("regForm").submit();
 
     return false;
   }
