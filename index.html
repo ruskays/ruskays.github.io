@@ -1,129 +1,150 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
-   <head>
-      <meta charset="utf-8">
-      <title>Цветочная площадка</title>
-      <!--[if IE]>
-      <meta http-equiv="X-UA-Compatible" content="IE = edge">
-      <![endif]-->
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta name="keywords" content="">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marmelad&amp;family=Raleway:wght@300;400;500&amp;family=Roboto:wght@500&amp;family=Rubik+Marker+Hatch&amp;display=swap">
-      <link rel="stylesheet" type="text/css" href="static/css/styles.css">
-   </head>
-   <body>
-      <div class="wrapper">
-         <header class="header">
-            <div class="container">
-               <div class="header-wrap">
-                  <a class="logo" href="#"><img src="static/images/content/logo.svg" width="98" height="86" alt=""></a>
-                  <div class="nav-wrap">
-                     <nav class="nav">
-                        <ul class="nav-list">
-                           <li class="nav-item"> <a class="nav-link" href="#">Магазины</a></li>
-                           <li class="nav-item"> <a class="nav-link" href="#">Контакты</a></li>
-                           <li class="nav-item"> <a class="nav-link" href="#">О нас</a></li>
-                        </ul>
-                     </nav>
-                  </div>
-                  <div class="header-wrap__right">
-                     <a class="phone" href="tel:+36787547894">+3 67 8754 7894</a>
-                     <div class="lang"> <a class="lang-link is-active" href="#">Ru</a><a class="lang-link" href="#">Eng</a></div>
-                     <div class="header-right__user user"><a class="user-logIn" href="#">Войти</a><a class="user-greatAcc btn btn-border" href="#">Создать аккаунт</a></div>
-                  </div>
-                  <div class="sandwich">
-                     <div class="sandwich__line sandwich__line--top"></div>
-                     <div class="sandwich__line sandwich__line--middle"></div>
-                     <div class="sandwich__line sandwich__line--bottom"></div>
-                  </div>
-               </div>
-            </div>
-         </header>
-         <div class="content">
-            <section class="s-banner">
-               <div class="container">
-                  <div class="banner">
-                     <h1 class="banner-title sec-title">Мы будем рады<br> сотрудничать с вами на <b>платформе '</b>Международной цветочной онлайн-площадки<b>'</b>!</h1>
-                     <p class="banner-descr">Присоединяйтесь к нам и начните получать доход с бизнеса в первый месяц регистрации! </p>
-                     <div class="banner-btns"> <a class="btn" href="#">Начать покупать</a><a class="btn btn-blue" href="#">Начать продавать </a></div>
-                  </div>
-               </div>
-            </section>
-            <section class="s-biz">
-               <div class="container">
-                  <div class="biz">
-                     <div class="biz-block">
-                        <div class="biz-block__text">
-                           <h2 class="sec-title">Заполните форму и начните развивать свой бизнес прямо сейчас!</h2>
-                           <p class="descr">Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство процессов автоматизированы, что сэкономит ваше время и деньги!</p>
-                        </div>
-                        <div class="biz-block__form">
-                           <form class="form" action="" id="regForm">
-                              <div class="form-step">
-                                 <div class="form-step__wrap">
-                                    <div class="form-group"> <label class="form-group__label" for="nameFF">Ваше имя</label><input class="form-group__input validate" type="text" name="nameFF" placeholder="Фролова Александра Васильевна"></div>
-                                    <div class="form-group"> <label class="form-group__label" for="compFF">Название Компании</label><input class="form-group__input validate" type="text" name="compFF" placeholder="ООО Атлантика"></div>
-                                    <div class="form-group"> <label class="form-group__label" for="mailFF">E-mail</label><input class="form-group__input validate" type="text" name="mailFF" placeholder="flolovaalexa@com.rur"></div>
-                                    <div class="form-group"> <label class="form-group__label" for="nameFF">Номер телефона</label><input class="mask form-group__input validate" type="text" name="nameFF" placeholder="+7 (XXX) - XXX XX XX"></div>
-                                    <div class="form-group"> <label class="form-group__label" for="nameFF">Промокод</label><input class="form-group__input" type="text" name="nameFF" placeholder="HGF864"></div>
-                                 </div>
-                              </div>
-                              <div class="form-step form-step-pass">
-                                 <div class="form-step__wrap">
-                                    <div class="form-group"> <label class="form-group__label" for="nameFF">Пароль</label><input class="form-group__input validate js-pass" type="password" name="nameFF" placeholder="Создайте пароль"></div>
-                                    <div class="form-group"> <label class="form-group__label" for="compFF">Подтвердите пароль</label><input class="form-group__input validate js-passRetry" type="password" name="compFF" placeholder="Повторите пароль"></div>
-                                    <div class="form-group">
-                                       <div id="captcha" class="captcha"></div>
-                                    </div>
-                                    <div class="form-group">
-                                       <label class="form-group__label" for="reCaptcha">Введите символы из картинки</label><input class="form-group__input validate js-pass" type="text" name="reCaptcha" id="reCaptcha" placeholder="Код из картинки">
-                                       <div id="errCaptcha" class="errmsg"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="form-btns"><button class="btn btn-blue" type="button" onclick="nextPrev(-1)" id="prevBtn">Назад</button><button class="btn btn-next" type="button" onclick="nextPrev(1)" id="nextBtn">Далее</button></div>
-                              <div class="form-confic"> <label class="checkbox"><span class="checkbox__text">Я даю согласие на обработку моих персональных данных и правовых документов</span><input type="checkbox" checked><span class="checkbox__custom"></span></label></div>
-                           </form>
-                           <div class="form--ok">
-                              <p class="descr">Спасибо, мы свяжемся с вами в ближайшее время</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-         </div>
-         <footer class="footer">
-            <div class="container">
-               <div class="footer-wrap">
-                  <div class="footer-wrap__block">
-                     <span class="title">Наши офисы</span>
-                     <div class="footer-wrap__items">
-                        <div class="footer-wrap__item"><span class="city">Московский офис</span><a class="phone" href="tel:+74552678907">+7 455 267-89-07</a><span class="adress">Берсеневский пер., д. 56, стр. 4, 6-й эт., Москва, 567754</span></div>
-                        <div class="footer-wrap__item"><span class="city">Ростовский офис</span><a class="phone" href="tel:+78788880167">+7 878 888-01-67</a><span class="adress">Буденовский пр-т, д. 84, 6-й эт., Ростов-на-Дону, 679965</span></div>
-                     </div>
-                  </div>
-                  <div class="footer-wrap__block">
-                     <span class="title">Мы в соц сетях</span>
-                     <div class="footer-wrap__block-socials"><a class="link" href="#">Instagram</a><a class="link" href="#">Facebook</a></div>
-                  </div>
-                  <div class="footer-wrap__block">
-                     <span class="title">Свяжитесь с нами</span>
-                     <div class="footer-wrap__block-call">
-                        <a class="phone" href="tel:+36787547894">+3 67 8754 7894</a><a class="mail" href="mailto:mflowers@flo.com">mflowers@flo.com</a>
-                        <a class="btn btn-icon" href="#">
-                           <span class="btn-text">Написать</span>
-                           <svg class="svg-sprite-icon icon-mail btn-icon__svg">
-                              <use xlink:href="static/images/sprite/symbol/sprite.svg#mail"></use>
-                           </svg>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <spa class="footer-copy">Авторские права 2008-2022 M-flowers.com</spa>
-            </div>
-         </footer>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Веб-студия РиверСтарт :: Frontend pack</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="assets/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Веб-студия РиверСтарт">
+    <meta property="twitter:title" content="Веб-студия РиверСтарт">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__inner"><a class="header__logo" href="/">
+              <svg class="svgsprite _logo">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#logo"></use>
+              </svg></a>
+        <div class="header__menus">
+          <div class="header__tags tags"> <a class="tags__link" href="#"><span class="tags__test">Сайты</span></a><a class="tags__link" href="#"><span class="tags__test">Сервисы</span></a><a class="tags__link" href="#"><span class="tags__test">Маркетинг</span></a><a class="tags__link" href="#"><span class="tags__test">SEO</span></a><a class="tags__link" href="#"><span class="tags__test">Приложения</span></a><a class="tags__link" href="#"><span class="tags__test">Брендинг</span></a></div>
+          <div class="header__nav nav-wrap">
+            <nav class="nav"> 
+              <ul class="nav__list"> 
+                <li class="nav__item"> <a class="nav__link" href="#">Кейсы</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#">Студия</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#">Блог</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#">Работа у нас</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <button class="header__callback btn"> <span class="btn__text">Обсудить проект</span></button>
+        <div class="menu-toggler">
+          <div class="menu-toggler__hamb">
+            <div class="menu-toggler__hamb__box"></div>
+            <div class="menu-toggler__hamb__inner"></div>
+          </div>
+        </div>
       </div>
-      <script src="static/js/jquery.min.js"></script><script src="static/js/main.js"></script>
-   </body>
+    </header>
+    <div class="content">
+      <section class="block _bgChange s-contacts">
+        <div class="container">
+          <div class="contacts">
+            <h1 class="contacts__title sec__title">Приходите в гости, пишите, звоните</h1>
+            <div class="contacts__links contLinks"> 
+              <div class="contLinks__item">
+                <div class="contLinks__item-block"> 
+                  <div class="contLinks__item-text"><span class="title">Поговорить с нами по телефону</span><a class="link _linkSpace" href="tel:+78312889354">8 (831) 2-889-354</a></div>
+                </div>
+                <div class="contLinks__item-comment comment"><picture class="comment__photo" >
+<source type="image/webp" data-srcset="assets/img/contacts/ira.webp">
+<source type="image/png" data-srcset="assets/img/contacts/ira.png">
+<img class="lazyload" data-src="assets/img/contacts/ira.png" alt="Ирина Пшеницина, аккаунт-менеджер">
+</picture>
+                  <div class="comment__text"> 
+                    <p class="text">Меня зовут Ира, скорее всего вам отвечу именно я 👋</p><span class="sub-text">Ирина Пшеницина, аккаунт-менеджер</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contLinks__item _mrLeft">
+                <div class="contLinks__item-block"> 
+                  <div class="contLinks__item-text"><span class="title">Написать нам на почту</span><a class="link" href="mailTo:hello@riverstart.ru">hello@riverstart.ru</a></div>
+                </div>
+              </div>
+              <div class="contLinks__item">
+                <div class="contLinks__item-block comment">
+                  <div class="contLinks__item-text"><span class="title">Поговорить с нашим аккаунт-менеджером в Telegram</span><a class="link" href="mailTo:hello@riverstart.ru">@ekhohrin</a></div><picture class="comment__photo comment__photo-big" >
+<source type="image/webp" data-srcset="assets/img/contacts/ekhorin.webp">
+<source type="image/png" data-srcset="assets/img/contacts/ekhorin.png">
+<img class="lazyload" data-src="assets/img/contacts/ekhorin.png" alt="hello@riverstart.ru">
+</picture>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__offices offices">
+              <div class="offices__item _offRight">
+                 <picture class="offices__item-photo" >
+<source type="image/webp" data-srcset="assets/img/contacts/offices/officeImg1.webp">
+<source type="image/png" data-srcset="assets/img/contacts/offices/officeImg1.jpg">
+<img class="lazyload" data-src="assets/img/contacts/offices/officeImg1.jpg" alt="Нижегородский офис">
+</picture>
+                <div class="offices__item-text"> <span class="title">Нижегородский офис</span>
+                  <p class="street">ул. Рождественская, 26</p><a class="phone" href="tel:+78312889354">8 (831) 2-889-354</a><a class="link" href="popup.html" data-fancybox data-type="ajax"> <span class="text">Как добраться</span>
+                        <svg class="svgsprite _arrLink">
+                          <use xlink:href="assets/img/svgsprite/svgsprite.svg#arrLink"></use>
+                        </svg></a>
+                </div>
+              </div>
+              <div class="offices__item _offLeft"><picture class="offices__item-photo" >
+<source type="image/webp" data-srcset="assets/img/contacts/offices/officeImg2.webp">
+<source type="image/png" data-srcset="assets/img/contacts/offices/officeImg2.jpg">
+<img class="lazyload" data-src="assets/img/contacts/offices/officeImg2.jpg" alt="Московский офис">
+</picture>
+                <div class="offices__item-text"> <span class="title">Московский офис</span>
+                  <p class="street">Новая площадь, 6</p><a class="phone" href="tel:+74991124621">8 (499) 112-46-21</a><a class="link" href="popup.html" data-fancybox data-type="ajax"> <span class="text">Как добраться</span>
+                        <svg class="svgsprite _arrLink">
+                          <use xlink:href="assets/img/svgsprite/svgsprite.svg#arrLink"></use>
+                        </svg></a>
+                </div>
+              </div>
+              <div class="offices__item _offCenter">
+                 <picture class="offices__item-photo" >
+<source type="image/webp" data-srcset="assets/img/contacts/offices/officeImg3.webp">
+<source type="image/png" data-srcset="assets/img/contacts/offices/officeImg3.png">
+<img class="lazyload" data-src="assets/img/contacts/offices/officeImg3.png" alt="Таллинский офис">
+</picture>
+                <div class="offices__item-text"> <span class="title">Таллинский офис</span>
+                  <p class="street">3 korrus, Metro Plaza, Viru väljak 2</p><a class="phone" href="tel:+3726104253">+372 610-42-53</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">footer</div>
+    </footer>
+    <div class="hidden">
+      <!-- include popups here-->
+    </div>
+    <link rel="stylesheet" href="assets/css/common.css?v=2.0.0">
+    <script>
+      /* изменяемые настройки скриптов, указаны значения по умолчанию */
+      var appConfig = {
+          /*
+          scrollToOffset: 100, // оффсет при скролле до элемента
+          popupLoadedEvent: 'app.popup_loaded' // событие загрузки модалки
+          */
+      }
+    </script>
+    <script src="assets/js/vendors.bundle.js"></script>
+    <script src="assets/js/main.bundle.js?v=2.0.0"></script>
+  </body>
 </html>
