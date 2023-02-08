@@ -15,7 +15,8 @@
 
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -23,10 +24,16 @@
 body{
     background: var(--body-linear);
     font-family: var(--main-font);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 1rem;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     min-height: 100vh;
     margin: 0;
     font-weight: 400;
@@ -38,9 +45,15 @@ body{
     width: 100%;
     margin: 0 auto;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 h2{
@@ -52,16 +65,24 @@ h2{
     margin-top: 150px;
     padding: 40px 50px;
     background: #FFFFFF;
-    box-shadow: 4px 4px 25px rgba(14, 76, 121, 0.18);
+    -webkit-box-shadow: 4px 4px 25px rgba(14, 76, 121, 0.18);
+            box-shadow: 4px 4px 25px rgba(14, 76, 121, 0.18);
     border-radius: 10px;
     max-width: 500px;
     width: 500px;
 }
 
 .form-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -89,6 +110,18 @@ h2{
     padding: 7px 27px 10px 29px;
     position: relative;
     font-size: 1.125rem;   
+}
+.form-control .form-control__input::-webkit-input-placeholder {
+    color: var(--color-placeholder);
+}
+.form-control .form-control__input::-moz-placeholder {
+    color: var(--color-placeholder);
+}
+.form-control .form-control__input:-ms-input-placeholder {
+    color: var(--color-placeholder);
+}
+.form-control .form-control__input::-ms-input-placeholder {
+    color: var(--color-placeholder);
 }
 .form-control .form-control__input::placeholder {
     color: var(--color-placeholder);
@@ -129,13 +162,24 @@ h2{
 }
 
 .form .form-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .form .form-bottom .descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 100%;
     padding-left: 11px;
     color: var(--color-blue);
@@ -158,6 +202,8 @@ h2{
     font-size: 1rem;
     height: 55px;
     width:100%;
+    -webkit-transition: linear .2s;
+    -o-transition: linear .2s;
     transition: linear .2s;
     max-width: 242px;
 }
@@ -170,8 +216,12 @@ h2{
 }
 .form .form-bottom__links {
     margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .form .form-bottom__links >*:not(:last-child) {
     margin-right: 35px;
@@ -187,11 +237,14 @@ h2{
 .form-showPass {
     background: none;
     border: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     cursor: pointer;
     position: absolute;
     right: 7px;
     top: 7px;
+    -webkit-transition: linear .2s;
+    -o-transition: linear .2s;
     transition: linear .2s;
 }
 .form-showPass:hover {
