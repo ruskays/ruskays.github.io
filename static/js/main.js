@@ -248,7 +248,7 @@ formSet('form');
             });
       
             // Создадим пользовательский макет ползунка масштаба.
-            ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='map-nav__wrapper'><div class='map-nav__block'>" + "<div id='zoom-in' title='Приблизить'><i class='map-nav__icon-plus'></i> <span>Приблизить</span></div>" + "<div id='zoom-out' title='Отдалить'><i class='map-nav__icon-minus'></i><span>Отдалить</span></div>" + "</div></div>", {
+            let ZoomLayout = ymaps.templateLayoutFactory.createClass("<div class='map-nav__wrapper'><div class='map-nav__block'>" + "<div id='zoom-in' title='Приблизить'><i class='map-nav__icon-plus'></i> <span>Приблизить</span></div>" + "<div id='zoom-out' title='Отдалить'><i class='map-nav__icon-minus'></i><span>Отдалить</span></div>" + "</div></div>", {
               build: function () {
                 ZoomLayout.superclass.build.call(this);
                 this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
