@@ -4,9 +4,10 @@ $(document).ready(function () {
   $('.popup-with-form').magnificPopup({
     type: 'inline',
     preloader: false,
+    fixedContentPos: false,
     callbacks: {
       open: function open() {
-        $('.form-close').on('click', function (event) {
+        $('.white-popup-close').on('click', function (event) {
           event.preventDefault();
           $.magnificPopup.close();
         });
@@ -17,6 +18,9 @@ $(document).ready(function () {
       }
     }
   });
+
+
+
   $('.js-slider').on('init', function () {
     $('.js-slider').removeClass('dn');
   });
@@ -38,30 +42,36 @@ $(document).ready(function () {
     }, {
       breakpoint: 575,
       settings: {
-        arrows: false,
-        centerMode: false,
         centerPadding: '40px',
         slidesToShow: 1
       }
     }]
   }); //sandwich
 
-  var sandwichToggle = function sandwichToggle() {
-    // Выбираем элементы, которые нам нужны. В примере мы ищем элементы с классом "sandwich"
-    var sandwichElements = document.querySelectorAll('.sandwich'); // Проходим циклом по всем эдементам и на каждый элемент вешаем слушателя, который по клику будет переключать класс
+  // const sandwichToggle = function sandwichToggle() {
+  //   // Выбираем элементы, которые нам нужны. В примере мы ищем элементы с классом "sandwich"
+  //   let sandwichElements = document.querySelector('.sandwich'); // Проходим циклом по всем эдементам и на каждый элемент вешаем слушателя, который по клику будет переключать класс
 
-    sandwichElements.forEach(function (item) {
-      item.addEventListener('click', showSandwichTarget);
-    });
+   
+  //     sandwichElements.addEventListener('click', showSandwichTarget);
+   
 
-    function showSandwichTarget() {
-      this.classList.toggle('is-active');
-      var slideTogle = document.querySelector('.header-mobInfo');
-      slideTogle.classList.toggle('is-active');
-    }
-  };
+  //   function showSandwichTarget() {
+  //     this.classList.toggle('is-active');
+  //     let slideTogle = document.querySelector('.header-mobInfo');
+  //     slideTogle.classList.toggle('is-active');
+  //   }
+    
+  // };
 
-  sandwichToggle(); //клик вне области
+  // sandwichToggle(); 
+  $('.sandwich').on('click', function() {
+    $(this).toggleClass('is-active');
+    $('.header-mobInfo').slideToggle()
+  })
+  
+
+  //клик вне области
 
   var div = document.querySelector('.header');
   document.addEventListener('click', function (e) {
@@ -71,34 +81,10 @@ $(document).ready(function () {
 
     if (!withinBoundaries) {
       sandwich.classList.remove('is-active');
-      slideTogle.classList.remove('is-active');
+      slideTogle.style.display = "none";
     }
-  }); //lazy laod yandeax map
-
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   setTimeout(initYandexMap, 5000);
-  // });
-  // document.addEventListener('scroll', initYandexMapOnEvent);
-  // document.addEventListener('mousemove', initYandexMapOnEvent);
-  // document.addEventListener('touchstart', initYandexMapOnEvent);
-
-  // function initYandexMapOnEvent(e) {
-  //   initYandexMap();
-  //   e.currentTarget.removeEventListener(e.type, initYandexMapOnEvent);
-  // }
-
-  // function initYandexMap() {
-  //   if (window.yandexMapDidInit) {
-  //     return false;
-  //   }
-
-  //   window.yandexMapDidInit = true;
-  //   var script = document.createElement('script');
-  //   script.type = 'text/javascript';
-  //   script.async = true;
-  //   script.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9ec0336b62f79a432fbfd667876eb5f4790f8b03fd3e2455227e9b9903e7cc52&amp;width=100%25&amp;height=388&amp;lang=ru_RU&amp;scroll=true';
-  //   document.getElementById("YandexMap").appendChild(script);
-  // } 
+  }); 
+  
   
   //форма и валидация
   function formSet(formID) {
@@ -111,22 +97,30 @@ $(document).ready(function () {
         let error = formValidate(form);
 
         let formData = new FormData(form);
+        let myForm = document.querySelector('.form');
+        let formOk = document.querySelector('._formOk');
+        let formError = document.querySelector('._formError')
         if (error === 0) {
             form.classList.add('_sending');
-            let response = await fetch('sendmail.php', {
+            let response = await fetch('/static/js/smart.php', {
                 method: 'POST',
                 body: formData
             });
 
             if(response.ok) {
                 
-                let result = await response.json();
-                alert(result.message);
+                let result = await response;
+                // console.log(result);
+                myForm.classList.add('hidden');
+                formOk.classList.add('is-active');
+                ym(93341694,'reachGoal','call');
                 formPreview.innerHTML = '';
                 form.reset();
                 form.classList.remove('_sending');
             } else {
-                alert('ошибка')
+                myForm.classList.add('hidden');
+                formError.classList.add('is-active');
+               
             }
         } else {
             // alert('Заполните обязательные поля');
@@ -209,8 +203,8 @@ $(document).ready(function () {
 }
 formSet('form');
 
-	
-	$(function () {
+  
+  $(function () {
 
     if ($("#map").length > 0) {
 
