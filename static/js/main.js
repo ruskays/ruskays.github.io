@@ -215,7 +215,7 @@ formSet('form');
     if ($("#map").length > 0) {
 
       $.ajax({
-        url: "/templates/Default/libs/ymaps-api.js",
+        url: "/static/js/ymaps-api.js",
         dataType: "script",
         success: function() {
             ymaps.ready(init);
@@ -287,7 +287,7 @@ formSet('form');
                 balloonContent: modalContent[i],
               }, {
                 iconLayout: 'default#imageWithContent',
-                iconImageHref: 'static/images/content/pin.svg',
+                iconImageHref: '/static/images/content/pin.svg',
                 iconImageSize: [35, 35],
                 iconImageOffset: [-14, -14],
                 iconContentOffset: [60, 5],
