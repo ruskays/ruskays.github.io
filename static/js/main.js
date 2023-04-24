@@ -280,7 +280,7 @@ formSet('form');
                 }
               });
       
-            MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="map__title">$[properties.iconContent]</div>');
+            let MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div class="map__title">$[properties.iconContent]</div>');
             for (i = 0; i < pointer.length; ++i) {
               ballunstolitsa = new ymaps.Placemark(pointer[i], {
                 iconContent: '',
