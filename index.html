@@ -1,1 +1,209 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>timer-app</title><script defer="defer" src="/js/chunk-vendors.efb4cb50.js"></script><script defer="defer" src="/js/app.98c272b3.js"></script><link href="/css/app.c746c199.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but timer-app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="ru-RU">
+   <head>
+      <meta charset="utf-8">
+      <title>Мегаполис</title>
+      <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE = edge">
+      <![endif]-->
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="keywords" content="">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Playfair+Display:wght@700&amp;display=swap">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+      <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <header class="header">
+            <div class="container">
+               <a class="logo" href="#"><img src="static/images/content/logo.svg" width="110" height="56" alt="Мегаполис"></a>
+               <address class="header-address">г. Воронеж, <br>ул. Цимлянская, 8А</address>
+               <div class="header-contacts contacts">
+                  <div class="contacts-links"> <a class="phone" href="tel:+74732295028">+7 (473) 229-50-28 </a><a class="phone" href="tel:+79202105666">+7 (473) 229-50-28 </a></div>
+                  <span class="worktime">На связи ежедневно с 8:00 до 21:00</span>
+               </div>
+               <div class="sandwich">
+                  <div class="sandwich__line sandwich__line--top"></div>
+                  <div class="sandwich__line sandwich__line--middle"></div>
+                  <div class="sandwich__line sandwich__line--bottom"></div>
+               </div>
+            </div>
+            <div class="header-mobInfo">
+               <address class="header-address">г. Воронеж, ул. Цимлянская, 8А</address>
+               <span class="worktime">На связи ежедневно с 8:00 до 21:00</span>
+            </div>
+         </header>
+         <div class="content">
+            <section class="s-banner">
+               <div class="container">
+                  <div class="banner">
+                     <h1 class="sec-title banner-title">Проведение поминальных обедов</h1>
+                     <ul class="list">
+                        <li class="list-item">Проводим поминки от 900 ₽ за человека</li>
+                        <li class="list-item">Без аренды зала и скрытых доплат</li>
+                        <li class="list-item">Меню на ваш выбор и бюджет</li>
+                        <li class="list-item">Разрешён свой алкоголь<br> без "пробкового сбора"</li>
+                     </ul>
+                     <a class="btn banner-btn popup-with-form" href="#form">Заказать звонок </a>
+                  </div>
+               </div>
+               <div class="s-banner-img"> <img src="static/images/content/zal.jpg" width="414" height="262" alt="Мегаполис Банкетный зал"></div>
+            </section>
+            <section class="s-slider bg-white">
+               <div class="container">
+                  <div class="slider">
+                     <div class="slider-top">
+                        <h2 class="sec-title">Фотогалерея</h2>
+                        <div class="slider-nav">
+                           <button class="slider-nav__but slider-nav__prev">
+                              <svg class="svg-sprite-icon icon-arr slider-nav__icon">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#arr"></use>
+                              </svg>
+                           </button>
+                           <button class="slider-nav__but slider-nav__next">
+                              <svg class="svg-sprite-icon icon-arr slider-nav__icon">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#arr"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="slider-wrap">
+                        <div class="js-slider dn">
+                           <div class="js-slider__item"> <img src="static/images/content/photo.jpg" width="416" height="294" alt="Фотогалерея"></div>
+                           <div class="js-slider__item"> <img src="static/images/content/photo.jpg" width="416" height="294" alt="Фотогалерея"></div>
+                           <div class="js-slider__item"> <img src="static/images/content/photo.jpg" width="416" height="294" alt="Фотогалерея"></div>
+                           <div class="js-slider__item"> <img src="static/images/content/photo.jpg" width="416" height="294" alt="Фотогалерея"></div>
+                           <div class="js-slider__item"> <img src="static/images/content/photo.jpg" width="416" height="294" alt="Фотогалерея"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="s-contacts bg-white">
+               <div class="container">
+                  <div class="dcontacts">
+                     <div class="dcontacts-info">
+                        <h2 class="sec-title">Контакты</h2>
+                        <address class="address">
+                           <div class="address-icon__wrap">
+                              <svg class="svg-sprite-icon icon-loc address-icon">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#loc"></use>
+                              </svg>
+                           </div>
+                           <span class="text">г. Воронеж, ул. Цимлянская, 8А</span>
+                        </address>
+                        <div class="contacts contacts-row">
+                           <div class="contacts-icon__wrap">
+                              <svg class="svg-sprite-icon icon-tel contacts-icon">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#tel"></use>
+                              </svg>
+                           </div>
+                           <div class="contacts-wrap">
+                              <div class="contacts-links"><a class="phone phone-black" href="tel:+74732295028">+7 (473) 229-50-28 </a><a class="phone phone-black" href="tel:+79202105666">+7 (473) 229-50-28 </a></div>
+                              <span class="worktime">На связи ежедневно с 8:00 до 21:00</span>
+                           </div>
+                        </div>
+                        <div class="social">
+                           <a class="social-link" href="#">
+                              <svg class="svg-sprite-icon icon-viber social-icon">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#viber"></use>
+                              </svg>
+                           </a>
+                           <a class="social-link" href="#">
+                              <svg class="svg-sprite-icon icon-whats social-icon">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#whats"></use>
+                              </svg>
+                           </a>
+                           <a class="social-link" href="#">
+                              <svg class="svg-sprite-icon icon-vk social-icon social-icon__vk">
+                                 <use xlink:href="static/images/sprite/symbol/sprite.svg#vk"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                     <div class="dcontacts-map">
+                        <div id="YandexMap"></div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+         <footer class="footer">
+            <div class="container">
+               <div class="footer-top">
+                  <div class="social">
+                     <a class="social-link" href="#">
+                        <svg class="svg-sprite-icon icon-viber social-icon">
+                           <use xlink:href="static/images/sprite/symbol/sprite.svg#viber"></use>
+                        </svg>
+                     </a>
+                     <a class="social-link" href="#">
+                        <svg class="svg-sprite-icon icon-whats social-icon">
+                           <use xlink:href="static/images/sprite/symbol/sprite.svg#whats"></use>
+                        </svg>
+                     </a>
+                     <a class="social-link" href="#">
+                        <svg class="svg-sprite-icon icon-vk social-icon social-icon__vk">
+                           <use xlink:href="static/images/sprite/symbol/sprite.svg#vk"></use>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="footer-top__right contacts contacts-row contacts-row__ai">
+                     <span class="worktime">На связи ежедневно с 8:00 до 21:00 </span>
+                     <div class="contacts-wrap">
+                        <div class="contacts-links"> <a class="phone" href="tel:+74732295028">+7 (473) 229-50-28 </a><a class="phone" href="tel:+79202105666">+7 (473) 229-50-28 </a></div>
+                     </div>
+                  </div>
+                  <a class="btn popup-with-form" href="#form">Заказать звонок </a>
+               </div>
+            </div>
+            <div class="footer-bot">
+               <div class="container">
+                  <a class="footer-bot__link link" href="#" target="_blank">Политика конфиденциальности</a>
+                  <a class="litex link" href="https://weblitex.ru/" target="_blank">
+                     <div class="litex-img"> <img src="static/images/content/litex.svg" width="23" height="16" alt="Разработка сайтов «Лайтекс»"></div>
+                     <span class="litex-text">Разработка сайтов «Лайтекс»</span>
+                  </a>
+               </div>
+            </div>
+         </footer>
+
+         <form action="#" id="form" novalidate class="form white-popup-block mfp-hide">
+            <div class="form-close">
+               <svg class="svg-sprite-icon icon-close">
+                  <use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use>
+               </svg>
+            </div>
+            <div class="form-head">
+               <span class="form-title sec-title">Оставить заявку на обратный звонок</span>
+               <p class="form-descr">Мы перезвоним вам и ответим на интересующие вопросы</p>
+            </div>
+            <div class="form-body">
+               <div class="form-control form-control__reg">
+                  <input type="text" id="name" name="name" class="form-control__input" required>
+                  <label class="form-control-placeholder" for="name">Имя</label>
+               </div>
+               <div class="form-control form-control__reg">
+                  <input type="text" id="formTel" name="telFF" class="form-control__input _tell _reg" required>
+                  <label class="form-control-placeholder" for="formTel">Телефон*</label>
+                  <small class="formError">Обязательно для заполнения</small>
+               </div>
+            </div>
+            <div class="form-bottom">
+               <button class="form-btn btn btn-form" type="submit">Отправить</button>
+               <p class="form-bottom__text">
+                  Отправляя заявку вы даете согласие на <a href="#" target="_black">обработку персональных данных
+                  <a>
+               </p>
+            </div>
+         </form>
+
+      </div>
+      <script src="static/js/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+      <script src="https://unpkg.com/imask"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script src="static/js/main.js"></script>
+   </body>
+</html>
