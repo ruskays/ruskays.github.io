@@ -4,6 +4,7 @@ $(document).ready(function () {
   $('.popup-with-form').magnificPopup({
     type: 'inline',
     preloader: false,
+    fixedBgPos: false,
     fixedContentPos: false,
     callbacks: {
       open: function open() {
