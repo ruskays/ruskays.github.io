@@ -1479,13 +1479,16 @@ footer {
   .white-popup-block {
     padding-top: 78px;
     height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
     max-width: 100%;
     margin: 0;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start; }
+    .mfp-content {
+    	background: #fff;
+    }
   .mfp-content {
     height: 100%; }
   .mfp-container {
@@ -1498,6 +1501,9 @@ footer {
     }
     .map-nav__block {
       top: 121px;
+    }
+    .social-link:hover .social-icon {
+    	fill: #B1B1B1;
     }
   .footer-top {
     -webkit-box-orient: vertical;
@@ -1553,7 +1559,7 @@ footer {
     .footer-bot .container > *:not(:last-child) {
       margin-bottom: 18px; }
       .footer-top .social .social-link:hover svg {
-        fill: inherit;
+        fill: #3E3E3E;
       }
     .footer-bot .container .litex {
       width: 100%;
