@@ -1477,9 +1477,10 @@ footer {
   .dcontacts-info .contacts {
     margin-bottom: 20px; }
   .white-popup-block {
+  	position: fixed;
     padding-top: 78px;
     height: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     max-width: 100%;
     margin: 0;
