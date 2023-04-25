@@ -47,25 +47,9 @@ $(document).ready(function () {
         slidesToShow: 1
       }
     }]
-  }); //sandwich
+  });
 
-  // const sandwichToggle = function sandwichToggle() {
-  //   // Выбираем элементы, которые нам нужны. В примере мы ищем элементы с классом "sandwich"
-  //   let sandwichElements = document.querySelector('.sandwich'); // Проходим циклом по всем эдементам и на каждый элемент вешаем слушателя, который по клику будет переключать класс
-
-   
-  //     sandwichElements.addEventListener('click', showSandwichTarget);
-   
-
-  //   function showSandwichTarget() {
-  //     this.classList.toggle('is-active');
-  //     let slideTogle = document.querySelector('.header-mobInfo');
-  //     slideTogle.classList.toggle('is-active');
-  //   }
-    
-  // };
-
-  // sandwichToggle(); 
+   //sandwich
   $('.sandwich').on('click', function() {
     $(this).toggleClass('is-active');
     $('.header-mobInfo').slideToggle()
