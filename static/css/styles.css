@@ -561,16 +561,24 @@ header {
   @media (max-width: 625px) {
     .phone:hover {
       color: #E8D4B5; } }
-
+.sandwich-wrap {
+	display: none;
+	margin-left: auto;
+	width: 44px;
+	height: 44px;
+}
 .sandwich {
   cursor: pointer;
   height: 12px;
-  display: none;
   position: relative;
   width: 20px; }
   @media (max-width: 625px) {
-    .sandwich {
-      display: block; } }
+  	.sandwich-wrap {
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  	}
+     }
   .sandwich.is-active .sandwich__line--top {
     top: 5px;
     -webkit-transform: rotate(45deg);
@@ -913,9 +921,17 @@ button {
 .social {
   white-space: nowrap; }
   .social > *:not(:last-child) {
-    margin-right: 15px; }
+    margin-right: 12px; }
   .social-link:hover .social-icon {
     fill: #DFC4A5; }
+  .social-link {
+  	display: inline-flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 34px;
+  	height: 34px;
+  	min-width: 34px;
+  }
   .social-icon {
     width: 24px;
     min-width: 24px;
@@ -1486,8 +1502,7 @@ footer {
     justify-content: flex-start; }
     .header .container .phone {
       font-size: 18px; }
-  .sandwich {
-    margin-left: auto; }
+  
   .header .logo {
     margin-right: 16px; }
   .s-banner {

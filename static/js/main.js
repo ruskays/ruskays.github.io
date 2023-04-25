@@ -50,8 +50,8 @@ $(document).ready(function () {
   });
 
    //sandwich
-  $('.sandwich').on('click', function() {
-    $(this).toggleClass('is-active');
+  $('.sandwich-wrap').on('click', function() {
+    $('.sandwich').toggleClass('is-active');
     $('.header-mobInfo').slideToggle()
   })
   
@@ -62,10 +62,11 @@ $(document).ready(function () {
   document.addEventListener('click', function (e) {
     var withinBoundaries = e.composedPath().includes(div);
     var slideTogle = document.querySelector('.header-mobInfo');
-    var sandwich = document.querySelector('.sandwich');
+    var sandwichWrap = document.querySelector('.sandwich-wrap');
 
     if (!withinBoundaries) {
-      sandwich.classList.remove('is-active');
+      sandwichWrap.firstElementChild.classList.remove('is-active');
+      // sandwich.classList.remove('is-active');
       slideTogle.style.display = "none";
     }
   }); 
