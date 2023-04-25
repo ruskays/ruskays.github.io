@@ -14,12 +14,6 @@ $(document).ready(function () {
         $('body').css('overflow', 'hidden');
         
       },
-      resize: function() {
-        if ($(window).width() < 576) {
-          $.magnificPopup.instance.fixedContentPos = true
-          console.log($.magnificPopup.instance.fixedContentPos)
-        }
-      },
       close: function close() {
         $('body').css('overflow', 'visible');
       },
