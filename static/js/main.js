@@ -4,7 +4,6 @@ $(document).ready(function () {
   $('.popup-with-form').magnificPopup({
     type: 'inline',
     preloader: false,
-    fixedBgPos: true,
     fixedContentPos: false,
     callbacks: {
       open: function open() {
@@ -13,10 +12,17 @@ $(document).ready(function () {
           $.magnificPopup.close();
         });
         $('body').css('overflow', 'hidden');
+        
+      },
+      resize: function() {
+        if ($(window).width() < 576) {
+          $.magnificPopup.instance.fixedContentPos = true
+          console.log($.magnificPopup.instance.fixedContentPos)
+        }
       },
       close: function close() {
         $('body').css('overflow', 'visible');
-      }
+      },
     }
   });
 
