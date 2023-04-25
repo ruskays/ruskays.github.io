@@ -11,10 +11,11 @@ $(document).ready(function () {
           event.preventDefault();
           $.magnificPopup.close();
         });
-        $('body').css('overflow', 'hidden');
-        
+        $('html').css('overflow', 'hidden');
+        $("body").css('overflow', 'scroll');
       },
       close: function close() {
+        $('html').css('overflow', 'visible');
         $('body').css('overflow', 'visible');
       },
     }
@@ -28,7 +29,6 @@ $(document).ready(function () {
   $('.js-slider').slick({
     centerMode: false,
     slidesToShow: 3,
-    focusOnSelect: true,
     dots: false,
     infinite: false,
     nextArrow: $(".slider-nav__next"),
