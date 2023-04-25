@@ -919,6 +919,8 @@ button {
   fill: #D3BC99; }
 
 .social {
+	display: flex;
+	align-items: center;
   white-space: nowrap; }
   .social > *:not(:last-child) {
     margin-right: 12px; }
@@ -931,6 +933,9 @@ button {
   	width: 34px;
   	height: 34px;
   	min-width: 34px;
+  }
+  .social-link .social-icon__vk {
+  	margin-top: 5px;
   }
   .social-icon {
     width: 24px;
