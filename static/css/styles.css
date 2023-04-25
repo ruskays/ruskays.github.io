@@ -1342,6 +1342,11 @@ footer {
   left: 13px;
   top: 19px;
 }
+.footer-bot .link:hover {
+	text-decoration: none;
+	color: #D4D4D4;
+	opacity: 0.8;
+}
 @media (max-width: 900px) {
   .header-contacts {
     -webkit-box-orient: horizontal;
@@ -1430,8 +1435,15 @@ footer {
   .white-popup-block {
     border-radius: 0;
   }
+
   .btn:hover {
     background: rgba(158, 137, 105, 0.2); }
+    .btn-form:hover {
+    	background: transparent;
+    }
+    .phone-black:hover {
+    	color: #56504C;
+    }
   .header-contacts .worktime, .header-address {
     display: none; }
   .header .container {
@@ -1582,6 +1594,17 @@ footer {
 	    -ms-flex-align: center;
 	    align-items: center;
 	    overflow: hidden;
+      }
+      .footer-bot .link:hover {
+      	color: #B2B2B2;
+      	opacity: 1;
+      }
+      .footer-bot .footer-bot__link:hover::before {
+      	background: #D4D4D4;
+    	opacity: 0.3;
+      }
+      .form-bottom__text a:hover {
+      	text-decoration: underline;
       }
   }
 
