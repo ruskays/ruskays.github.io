@@ -1642,11 +1642,14 @@ footer {
       }
   }
 
-@media (max-width: 413px) {
-  .banner-title {
-    font-size: 28px; } }
 
-@media (max-width: 360px) {
+
+@media (max-width: 413px) {
+	.container {
+		padding: 0 16px;
+	}
+	.banner-title {
+    font-size: 28px; } 
   .header .container .phone{
     font-size: 14px;
     line-height: 20px;
