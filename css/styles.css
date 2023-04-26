@@ -1381,29 +1381,29 @@ footer {
 
 @media (hover: hover) {
 	a:hover {
-		color: #F8F0E5;
-  		text-decoration: none; 
-  	}
+    color: #F8F0E5;
+      text-decoration: none; 
+    }
    .footer-bot .link:hover {
-		text-decoration: none;
-		color: #D4D4D4;
-		opacity: 0.8;
-	}
-	.btn:hover {
-    	background: transparent; }
-  	.btn-form:hover {
+    text-decoration: none;
+    color: #D4D4D4;
+    opacity: 0.8;
+  }
+  .btn:hover {
+      background: transparent; }
+    .btn-form:hover {
       background: #F8F0E5;
     }
     .slider-nav__but:hover {
       background: #F8F0E5; }
 
     .social-link:hover .social-icon {
-    	fill: #DFC4A5; }
-   	.form-bottom__text a:hover::before {
+      fill: #DFC4A5; }
+    .form-bottom__text a:hover::before {
       display: none;
     }
 }
-@media (hover: hover) , (max-width: 992px) {
+@media (hover: hover) and (max-width: 992px) {
 	.slider-nav__but:hover {
 	    background: transparent;
 	  }

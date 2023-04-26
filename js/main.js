@@ -88,7 +88,7 @@ $(document).ready(function () {
         let formError = document.querySelector('._formError')
         if (error === 0) {
             form.classList.add('_sending');
-            let response = await fetch('/static/js/smart.php', {
+            let response = await fetch('/js/smart.php', {
                 method: 'POST',
                 body: formData
             });
@@ -195,7 +195,7 @@ formSet('form');
     if ($("#map").length > 0) {
 
       $.ajax({
-        url: "/static/js/ymaps-api.js",
+        url: "/js/ymaps-api.js",
         dataType: "script",
         success: function() {
             ymaps.ready(init);
@@ -267,7 +267,7 @@ formSet('form');
                 balloonContent: modalContent[i],
               }, {
                 iconLayout: 'default#imageWithContent',
-                iconImageHref: '/static/images/content/pin.svg',
+                iconImageHref: '/images/content/pin.svg',
                 iconImageSize: [35, 35],
                 iconImageOffset: [-14, -14],
                 iconContentOffset: [60, 5],
